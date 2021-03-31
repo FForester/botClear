@@ -5,6 +5,10 @@ import time
 
 bot = telebot.TeleBot('1243149073:AAGj-V0O2ug103Rnb1LGezzyfNwHJEna5_Y')
 
+@bot.message_handler(commands=['start', 'help'])
+def send_welcome(message):
+	bot.reply_to(message, time.time())
+    
 @bot.callback_query_handler(func=lambda call: True)
 def callback_worker(call):
     if call.data == "clear":
