@@ -16,7 +16,7 @@ def thread_function(name):
     status = True
     while True:
         arrTime = [9, 11, 14, 15, 17, 19]
-        result = time.gmtime(time.time())
+        result = time.gmtime(1617026400)
         if (result.tm_wday < 5 and (result.tm_hour in arrTime) and result.tm_min < 1 and status):
             status = False
             keyboard = types.InlineKeyboardMarkup()
